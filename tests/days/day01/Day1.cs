@@ -12,7 +12,7 @@ public class Day1
         testData
             .Split($"{Environment.NewLine}{Environment.NewLine}")
             .Select(x => x.Split(Environment.NewLine).Select(int.Parse))
-            .Select(x => x.Aggregate((sum, val) => sum + val))
+            .Select(x => x.Sum())
             .Max()
             .Should()
             .Be(24000);
@@ -25,7 +25,7 @@ public class Day1
             .ReadAllText(InputFile)
             .Split($"{Environment.NewLine}{Environment.NewLine}")
             .Select(x => x.Split(Environment.NewLine).Select(int.Parse))
-            .Select(x => x.Aggregate((sum, val) => sum + val))
+            .Select(x => x.Sum())
             .Max()
             .Should()
             .Be(66719);
@@ -39,25 +39,25 @@ public class Day1
         testData
             .Split($"{Environment.NewLine}{Environment.NewLine}")
             .Select(x => x.Split(Environment.NewLine).Select(int.Parse))
-            .Select(x => x.Aggregate((sum, val) => sum + val))
+            .Select(x => x.Sum())
             .OrderDescending()
             .Take(3)
-            .Aggregate((sum, val) => sum + val)
+            .Sum()
             .Should()
             .Be(45000);
     }
     
     [Fact]
-    public void Part2_The_Top_3_Most_Carrying_Elves_Carries_Should_Carry_198551()
+    public void Part2_The_Top_3_Most_Carrying_Elves_Should_Carry_198551()
     {
         File
             .ReadAllText(InputFile)
             .Split($"{Environment.NewLine}{Environment.NewLine}")
             .Select(x => x.Split(Environment.NewLine).Select(int.Parse))
-            .Select(x => x.Aggregate((sum, val) => sum + val))
+            .Select(x => x.Sum())
             .OrderDescending()
             .Take(3)
-            .Aggregate((sum, val) => sum + val)
+            .Sum()
             .Should()
             .Be(198551);
     }
