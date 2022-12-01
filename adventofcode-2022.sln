@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{321815F9-50B2-49B3-9B6D-47A61FCBE692}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "days", "tests\days\days.csproj", "{B5E90EE4-B028-4FE9-B804-BE6FCE249CD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B5E90EE4-B028-4FE9-B804-BE6FCE249CD9} = {321815F9-50B2-49B3-9B6D-47A61FCBE692}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5E90EE4-B028-4FE9-B804-BE6FCE249CD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5E90EE4-B028-4FE9-B804-BE6FCE249CD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5E90EE4-B028-4FE9-B804-BE6FCE249CD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5E90EE4-B028-4FE9-B804-BE6FCE249CD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
