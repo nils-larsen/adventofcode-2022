@@ -26,6 +26,14 @@
       <EmbeddedResource Include="day01\day1.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
+      <None Remove="day02\day2.txt" />
+      <EmbeddedResource Include="day02\day2.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="day02\Draw.cs" />
     </ItemGroup>
 
 </Project>
