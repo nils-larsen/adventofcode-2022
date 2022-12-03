@@ -6,7 +6,6 @@ public record Winning : IHand
 
     public bool ChooseHand(string you) => you == "Z";
     
-
     public Score Fight(string opponent)
     {
         if (opponent == Scissors.EncryptedShape)
