@@ -14,12 +14,12 @@ public class Day3
     };
     
     [Fact]
-    public void The_Sum_Of_The_Priorities_Should_Be_157()
+    public void Part1_The_Sum_Of_The_Priorities_Should_Be_157()
     {
         _testData
-            .Select(x => x.Chunk(x.Length / 2).ToList())
-            .SelectMany(x => x[0].Intersect(x[1]))
-            .Select(x => char.IsLower(x) ? x % 32 : x % 32 + 26)
+            .Select(rucksack => rucksack.Chunk(rucksack.Length / 2).ToList())
+            .SelectMany(compartment => compartment[0].Intersect(compartment[1]))
+            .Select(item => char.IsLower(item) ? item % 32 : item % 32 + 26)
             .Sum()
             .Should()
             .Be(157);
@@ -30,21 +30,21 @@ public class Day3
     {
         File
             .ReadLines(InputFile)
-            .Select(x => x.Chunk(x.Length / 2).ToList())
-            .SelectMany(x => x[0].Intersect(x[1]))
-            .Select(x => char.IsLower(x) ? x % 32 : x % 32 + 26)
+            .Select(rucksack => rucksack.Chunk(rucksack.Length / 2).ToList())
+            .SelectMany(compartment => compartment[0].Intersect(compartment[1]))
+            .Select(item => char.IsLower(item) ? item % 32 : item % 32 + 26)
             .Sum()
             .Should()
             .Be(8153);
     }
     
     [Fact]
-    public void The_Sum_Of_3_Elves_Priorities_Should_Be_70()
+    public void Part2_The_Sum_Of_3_Elves_Priorities_Should_Be_70()
     {
         _testData
-            .ToMatrix(3)
-            .SelectMany(x => x[0].Intersect(x[1]).Intersect(x[2]))
-            .Select(x => char.IsLower(x) ? x % 32 : x % 32 + 26)
+            .Chunk(3)
+            .SelectMany(rucksack => rucksack[0].Intersect(rucksack[1]).Intersect(rucksack[2]))
+            .Select(item => char.IsLower(item) ? item % 32 : item % 32 + 26)
             .Sum()
             .Should()
             .Be(70);
@@ -55,9 +55,9 @@ public class Day3
     {
         File
             .ReadLines(InputFile)
-            .ToMatrix(3)
-            .SelectMany(x => x[0].Intersect(x[1]).Intersect(x[2]))
-            .Select(x => char.IsLower(x) ? x % 32 : x % 32 + 26)
+            .Chunk(3)
+            .SelectMany(rucksack => rucksack[0].Intersect(rucksack[1]).Intersect(rucksack[2]))
+            .Select(item => char.IsLower(item) ? item % 32 : item % 32 + 26)
             .Sum()
             .Should()
             .Be(2342);
