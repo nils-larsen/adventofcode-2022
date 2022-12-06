@@ -38,6 +38,10 @@
       <EmbeddedResource Include="day04\day4.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
+      <None Remove="day05\day5.txt" />
+      <EmbeddedResource Include="day05\day5.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
